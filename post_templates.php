@@ -86,7 +86,7 @@ class Single_Post_Template_Plugin {
 	function add_metabox() {
 
 		if ( get_post_templates() )
-			add_meta_box( 'pt_post_templates', __( 'Single Post Template', 'genesis' ), 'pt_inner_custom_box', 'post', 'normal', 'high' );
+			add_meta_box( 'pt_post_templates', __( '为文章页选择模板', 'genesis' ), 'pt_inner_custom_box', 'post', 'normal', 'high' );
 
 	}
 
@@ -97,10 +97,10 @@ class Single_Post_Template_Plugin {
 
 		<label class="hidden" for="post_template"><?php  _e( 'Post Template', 'genesis' ); ?></label><br />
 		<select name="_wp_post_template" id="post_template" class="dropdown">
-			<option value=""><?php _e( 'Default', 'genesis' ); ?></option>
+			<option value=""><?php _e( '默认模板', 'genesis' ); ?></option>
 			<?php post_templates_dropdown(); ?>
 		</select><br /><br />
-		<p><?php _e( 'Some themes have custom templates you can use for single posts that might have additional features or custom layouts. If so, you will see them above.', 'genesis' ); ?></p>
+		<p><?php _e( '有些主题有多个自定义文章页模板，这样就可以为不同的文章页添加特别的功能和布局。如果有，则上面的下拉框可以见到。', 'genesis' ); ?></p>
 		<?php
 
 	}
